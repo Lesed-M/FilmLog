@@ -1,0 +1,89 @@
+ion-content {
+  --background: linear-gradient(180deg, #1a1a2e 0%, #0d0d0d 100%);
+}
+
+/* 4 rows */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 12px;
+}
+
+/* TILE */
+.movie-tile {
+  cursor: pointer;
+}
+
+/* SMALLER POSTER */
+.poster-wrapper {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT (compact) */
+.movie-title {
+  color: white;
+  font-size: 0.7em;
+  font-weight: 600;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+.movie-year {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.65em;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  gap: 4px;
+}
+
+/* btn wathced */
+.watched-btn {
+  background: #3a3a3a;
+  color: #ffffff;
+
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  font-size: 0.65em;
+  font-weight: 500;
+}
+
+/* remove btn*/
+.remove-btn {
+  background: #ff4d4d;
+  color: #ffffff;
+
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  font-size: 0.65em;
+  font-weight: 600;
+}
+
+.movie-tile {
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+
+  transition: transform 0.2s ease, border 0.2s ease;
+}

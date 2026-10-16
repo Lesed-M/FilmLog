@@ -1,0 +1,54 @@
+<!-- login page -->
+<!--<ion-content class="ion-padding">
+  <div class="login-container">
+    <h1>CineTrack</h1>
+
+    <ion-segment [(ngModel)]="mode">
+      <ion-segment-button value="login">Login</ion-segment-button>
+      <ion-segment-button value="signup">Sign Up</ion-segment-button>
+    </ion-segment>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block"  (click)="submit()" class="ion-margin-top">
+      {{ mode === 'login' ? 'Login' : 'Create Account' }}
+    </ion-button>
+  </div>
+</ion-content> -->
+
+<ion-content class="ion-padding">
+  <div class="center-wrapper">
+  <ion-card>
+    <ion-card-content>
+      <div class="login-container">
+          <h1>Popcorn</h1>
+          <ion-segment [(ngModel)]="mode">
+            <ion-segment-button value="login">Login</ion-segment-button>
+            <ion-segment-button value="signup">Sign Up</ion-segment-button>
+          </ion-segment>
+
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="email" type="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input [(ngModel)]="password" type="password"></ion-input>
+          </ion-item>
+
+          <ion-button expand="block" (click)="submit()" class="ion-margin-top">
+            {{ mode === 'login' ? 'Login' : 'Create Account' }}
+          </ion-button>
+        </div>
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>

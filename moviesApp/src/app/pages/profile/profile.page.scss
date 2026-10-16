@@ -1,0 +1,57 @@
+ion-content {
+  --background: linear-gradient(180deg, #1a1a2e 0%, #0d0d0d 100%);
+  color: white;
+}
+
+/* FULL PAGE CENTERING */
+.profile-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* MAIN CARD */
+.profile-card {
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* AVATAR */
+.avatar {
+  font-size: 4.5em;
+  color: #e2b04a;
+  margin-bottom: 10px;
+}
+
+/* EMAIL */
+.profile-card h2 {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+}
+
+/* STATS ROW */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* INDIVIDUAL STAT */
+.stat .value {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: white;
+}
+
+.stat .label {
+  font-size: 0.7em;
+  color: rgba(255,255,255,0.5);
+}

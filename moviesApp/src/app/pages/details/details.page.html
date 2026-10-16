@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/search"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ movie?.['#TITLE'] }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Poster -->
+  <img 
+    [src]="movie?.['#IMG_POSTER']" 
+    [alt]="movie?.['#TITLE']"
+    class="poster" />
+  <!-- Movie Info -->
+  <div class="details-body">
+    <h2>{{ movie?.['#TITLE'] }}</h2>
+    <p><strong>Year:</strong> {{ movie?.['#YEAR'] }}</p>
+    <p><strong>Cast:</strong> {{ movie?.['#ACTORS'] }}</p>
+    <!-- Add to Watchlist button — shown if not watched and not in watchlist -->
+    <ion-button 
+      expand="block" 
+      *ngIf="!watched && !inWatchlist" 
+      (click)="addToWatchlist()">
+      + Add to Watchlist
+    </ion-button>
+    <!--Watched button,shown if in watchlist -->
+    <ion-button 
+      expand="block" 
+      color="success" 
+      *ngIf="inWatchlist" 
+      (click)="markWatched()">
+      ✓ Mark as Watched
+    </ion-button>
+    <!-- Already watched -->
+    <ion-badge 
+      color="medium" 
+      *ngIf="watched">
+      Already Watched
+    </ion-badge>
+  </div>
+</ion-content>

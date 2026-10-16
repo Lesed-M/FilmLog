@@ -1,0 +1,32 @@
+// For information on how to create your own theme, please refer to:
+// https://ionicframework.com/docs/theming/
+:root {
+  /* Base dark theme */
+  --ion-background-color: #0d0d1a;   /* deep navy background */
+  --ion-text-color: #E0E0E0;         /* light text */
+
+  /* Surfaces */
+  --ion-card-background: #1a1a2e;    /* dark indigo card */
+  --ion-toolbar-background: rgba(26, 26, 46, 0.9);
+  --ion-toolbar-color: #ffffff;
+
+  /* Accent color (blue) */
+  --ion-color-primary: #3a86ff;      /* vibrant blue */
+  --ion-color-primary-rgb: 58,134,255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #336dcc;
+  --ion-color-primary-tint: #5a9eff;
+
+  /* Searchbar */
+  --ion-searchbar-background: rgba(58, 134, 255, 0.15); /* translucent blue */
+  --ion-searchbar-border-color: transparent;
+  --ion-searchbar-input-text-color: #ffffff;            /* typed text */
+  --ion-searchbar-input-placeholder-color: rgba(255,255,255,0.6);
+  --ion-searchbar-icon-color: #3a86ff;
+
+  /* Tab bar (bottom navigation) */
+  --ion-tab-bar-background: rgba(26, 26, 46, 0.9);
+  --ion-tab-bar-border-color: rgba(255, 255, 255, 0.1);
+  --ion-tab-bar-color: rgba(255,255,255,0.6);
+  --ion-tab-bar-color-selected: #3a86ff;
+}

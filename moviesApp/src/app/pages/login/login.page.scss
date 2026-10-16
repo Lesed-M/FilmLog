@@ -1,0 +1,99 @@
+$accent: #e2b04a;
+$radius: 16px;
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+ion-content {
+  --background: linear-gradient(160deg, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 40px 24px;
+
+  h1 {
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    color: $accent;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .tagline {
+    text-align: center;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 32px;
+  }
+}
+
+ion-segment {
+  --background: rgba(255, 255, 255, 0.1);
+  border-radius: $radius;
+  margin-bottom: 24px;
+}
+
+ion-segment-button 
+{
+  --color: rgba(255, 255, 255, 0.6);
+  --color-checked: #0f0c29;
+  --indicator-color: #{$accent};
+  font-weight: 600;
+}
+
+ion-item 
+{
+  --background: rgba(255, 255, 255, 0.08);
+  --border-radius: #{$radius};
+  --color: white;
+  --placeholder-color: rgba(255,255,255,0.4);
+  --highlight-color-focused: #{$accent};
+  margin-bottom: 12px;
+  border-radius: $radius;
+}
+
+ion-label {
+  --color: rgba(255,255,255,0.6) !important;
+}
+
+ion-button {
+  --background: #{$accent};
+  --color: #0f0c29;
+  --border-radius: #{$radius};
+  font-weight: 700;
+  font-size: 1em;
+  height: 52px;
+  margin-top: 24px;
+}
+ion-searchbar {
+  --background: rgba(255, 255, 255, 0.12); /* background */
+  --color: white;                         
+  --placeholder-color: rgba(255,255,255,0.5);
+  --icon-color: #{$accent};               
+  border-radius: $radius;
+  backdrop-filter: blur(10px);            
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+ion-tab-bar {
+  background: rgba(255, 255, 255, 0.08); /* lighter translucent background */
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+ion-tab-button {
+  color: rgba(255,255,255,0.6);
+}
+
+ion-tab-button[aria-selected="true"] {
+  color: #{$accent}; 
+}

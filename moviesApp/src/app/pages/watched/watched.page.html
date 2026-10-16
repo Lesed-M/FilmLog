@@ -1,0 +1,35 @@
+<div class="grid-container">
+
+  <div class="movie-tile" *ngFor="let movie of watchedList">
+
+    <!-- POSTER -->
+    <div class="poster-wrapper" (click)="openDetails(movie)">
+      <img [src]="movie['#IMG_POSTER']" />
+    </div>
+
+    <!-- TITLE -->
+    <div class="movie-title">
+      {{ movie['#TITLE'] }}
+    </div>
+
+    <!-- YEAR -->
+    <div class="movie-year">
+      {{ movie['#YEAR'] }}
+    </div>
+
+    <!-- ACTIONS (same layout style as watchlist) -->
+    <div class="actions">
+
+      <button class="watched-btn">
+        Watched {{ movie.timesWatched }}×
+      </button>
+
+      <button class="remove-btn" (click)="remove(movie)">
+        Remove
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

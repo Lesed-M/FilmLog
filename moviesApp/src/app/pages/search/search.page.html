@@ -1,0 +1,113 @@
+<!-- search -->
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Search Movies</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar 
+      [(ngModel)]="query" 
+      (ionInput)="searchMovies()"
+      placeholder="Search IMDb...">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item 
+      *ngFor="let movie of results" 
+      button 
+      (click)="openDetails(movie)">
+      
+      <ion-thumbnail slot="start">
+        <img [src]="movie['#IMG_POSTER']" [alt]="movie['#TITLE']" />
+      </ion-thumbnail>
+
+      <ion-label>
+        <h2>{{ movie['#TITLE'] }}</h2>
+        <p>{{ movie['#YEAR'] }}</p>
+      </ion-label>
+
+      <ion-button 
+        slot="end" 
+        fill="clear" 
+        (click)="$event.stopPropagation(); addToWatchlist(movie)">
+        <ion-icon name="bookmark-outline"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-spinner *ngIf="loading" class="ion-margin"></ion-spinner>
+
+  <div class="empty-state" *ngIf="results.length === 0 && !loading && query.length > 0">
+    <p>No results found for "{{ query }}"</p>
+  </div>
+
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search Movies</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar 
+      [(ngModel)]="query" 
+      (ionInput)="searchMovies()"
+      placeholder="Search IMDb...">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- GRID CONTAINER -->
+  <div class="grid-container">
+
+    <!-- MOVIE TILE -->
+    <div 
+      class="movie-tile"
+      *ngFor="let movie of results"
+      (click)="openDetails(movie)">
+
+      <!-- POSTER -->
+      <div class="poster-wrapper">
+
+        <img 
+          [src]="movie['#IMG_POSTER']" 
+          [alt]="movie['#TITLE']" />
+
+        <!-- BOOKMARK BUTTON -->
+        <ion-button 
+          fill="clear"
+          class="bookmark-btn"
+          (click)="$event.stopPropagation(); addToWatchlist(movie)">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-button>
+
+      </div>
+
+      <!-- TITLE -->
+      <div class="movie-title">
+        {{ movie['#TITLE'] }}
+      </div>
+
+      <!-- YEAR -->
+      <div class="movie-year">
+        {{ movie['#YEAR'] }}
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LOADING -->
+  <ion-spinner *ngIf="loading" class="ion-margin"></ion-spinner>
+
+  <!-- EMPTY STATE -->
+  <div class="empty-state" *ngIf="results.length === 0 && !loading && query.length > 0">
+    <p>No results found for "{{ query }}"</p>
+  </div>
+
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="profile-container">
+
+  <!-- PROFILE CARD -->
+<div class="profile-wrapper">
+
+  <div class="profile-card">
+
+    <ion-icon name="person-circle-outline" class="avatar"></ion-icon>
+
+    <h2>{{ userEmail }}</h2>
+
+    <div class="stats">
+
+      <div class="stat">
+        <div class="value">{{ watchlistCount }}</div>
+        <div class="label">Watchlist</div>
+      </div>
+
+      <div class="stat">
+        <div class="value">{{ watchedCount }}</div>
+        <div class="label">Watched</div>
+      </div>
+
+    </div>
+
+    <ion-button expand="block" color="danger" (click)="logout()">
+      Log Out
+    </ion-button>
+
+  </div>
+
+</div>
+
+  <!-- STATS CARDS -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <ion-icon name="bookmark-outline" color="warning"></ion-icon>
+      <div class="label">Watchlist</div>
+      <div class="value">{{ watchlistCount }}</div>
+    </div>
+
+    <div class="stat-card">
+      <ion-icon name="eye-outline" color="success"></ion-icon>
+      <div class="label">Watched</div>
+      <div class="value">{{ watchedCount }}</div>
+    </div>
+
+  </div>
+
+  <!-- LOGOUT -->
+  <ion-button expand="block" color="danger" (click)="logout()">
+    Log Out
+  </ion-button>
+
+</div>
